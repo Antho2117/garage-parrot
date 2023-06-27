@@ -60,8 +60,119 @@
   </header>
 
   <main>
+    
+    <nav>
+      <!-- Navigation tabs -->
+      <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <button 
+          class="nav-link active" 
+          id="nav-home-tab" 
+          data-bs-toggle="tab" 
+          data-bs-target="#nav-home" 
+          type="button" 
+          role="tab" 
+          aria-controls="nav-home" 
+          aria-selected="true"
+        >
+          Laisser un avis
+        </button>
+        <button 
+          class="nav-link" 
+          id="nav-profile-tab" 
+          data-bs-toggle="tab" 
+          data-bs-target="#nav-profile" 
+          type="button" 
+          role="tab" 
+          aria-controls="nav-profile" 
+          aria-selected="false"
+        >
+          Consulter les avis
+        </button>
+      </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+      <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+        <form class="container-fluid p-2 my-3">
+          <div class="mb-3">
+            <label for="username" class="form-label">Quel est votre nom?</label>
+            <input type="text" id="username" class="form-control" placeholder="Votre nom">
+          </div>
+          <div class="mb-3">
+            Combien d'étoiles/5 attribueriez-vous à la prestation réalisée au sein de notre garage?            
+            <!-- stars rate -->
+            <div class="mb-3" id="rating">
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                width="16" 
+                height="16" 
+                fill="currentColor" 
+                class="bi bi-star-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                width="16" 
+                height="16" 
+                fill="currentColor" 
+                class="bi bi-star-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                width="16" 
+                height="16" 
+                fill="currentColor" 
+                class="bi bi-star-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                width="16" 
+                height="16" 
+                fill="currentColor" 
+                class="bi bi-star-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                width="16" 
+                height="16" 
+                fill="currentColor" 
+                class="bi bi-star-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+              </svg>
+            </div>
+          </div>
+          <div>
+            <label for="useropinion" class="form-label">Message :</label>
+            <textarea type="text" id="useropinion" class="form-control" row="5" placeholder="Votre message"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="container-fluid pt-3 fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+        <h3>Listing des avis clients</h3>
 
-    <p>Laisser un avis</p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique quis labore fuga eaque qui, animi quod, fugit doloribus, pariatur ratione enim deleniti odio at ex voluptate nulla voluptatum ipsam! Temporibus!
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique quis labore fuga eaque qui, animi quod, fugit doloribus, pariatur ratione enim deleniti odio at ex voluptate nulla voluptatum ipsam! Temporibus!
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique quis labore fuga eaque qui, animi quod, fugit doloribus, pariatur ratione enim deleniti odio at ex voluptate nulla voluptatum ipsam! Temporibus!
+
+      </div>  
+    </div>
 
   </main>
 
