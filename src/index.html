@@ -19,12 +19,11 @@
 
   <!-- Navbar -->
   <header>
-    <nav class="navbar navbar-dark bg-primary">     
-      <div class="container-fluid d-flex">  
-        <p class="mb-0 fs-6">Accueil</p>     
+    <nav class="navbar navbar-dark navbar-expand-md bg-primary">     
+      <div class="container-fluid d-flex">     
 
         <!-- Main logo -->
-        <a href="index.html" class="col-8"><img src="../img/logo-no-background.png" class="img-fluid"></a>
+        <a href="index.html" class="col-8 col-md-9"><img src="../img/logo-no-background.png" class="img-fluid"></a>
 
         <!-- Dropdown menu -->
         <button 
@@ -45,43 +44,67 @@
           </span>
         </button> 
       </div>
-    </nav>
-    <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
-      <div class="bg-primary p-4">
-        <ul class="list-unstyled text-center">
-          <li class="m-2"><a href="index.html" class="text-decoration-none text-black">Accueil</a></li>
-          <li class="m-2"><a href="cars.html" class="text-decoration-none text-black">Voitures</a></li>
-          <li class="m-2"><a href="workshop.html" class="text-decoration-none text-black">Atelier</a></li>
-          <li class="m-2"><a href="contact.html" class="text-decoration-none text-black">Contact</a></li>
-          <li class="m-2"><a href="feedback.html" class="text-decoration-none text-black">Laisser un avis</a></li>
-        </ul>
+      <div class="collapse navbar-collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
+        <div class="bg-primary mx-2">
+          <ul class="navbar-nav list-unstyled text-center">
+            <li class="nav-item-2">
+              <a href="index.html" class="nav-link text-decoration-none text-black">Accueil</a>
+            </li>
+            <li class="nav-item-2">
+              <a href="cars.html" class="nav-link text-decoration-none text-black">Voitures</a>
+            </li>
+            <li class="nav-item-2">
+              <a href="workshop.html" class="nav-link text-decoration-none text-black">Atelier</a>
+            </li>
+            <li class="nav-item-2">
+              <a href="contact.html" class="nav-link text-decoration-none text-black">Contact</a>
+            </li>
+            <li class="nav-item-2">
+              <a href="feedback.html" class="nav-link text-decoration-none text-black">Avis</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
+    </nav>
   </header>
 
-  <main class="d-flex flex-column align-items-center">
+  <aside class="d-flex flex-column align-items-center">
     <h1 class="mt-3">Garage V.Parrot</h1>
     <h3 class="m-2">Tout pour vous et votre auto</h3>
-    <p class="m-2 text-center">Depuis plus de 15 ans le garage Parrot vous accompagne au quotidien dans l'entretien et 
+    <p class="m-2 text-center col-md-9">Depuis plus de 15 ans le garage Parrot vous accompagne au quotidien dans l'entretien et 
       la réparation de votre véhicule, avec comme point central, votre satisfaction. 
     </p>
-    <button type="button" class="btn btn-primary m-3">Contactez-nous</button>
-    <img src="../img/hoonicorn.png" class="img-fluid">
-    <p class="text-center mt-3">Le garage V.Parrot vous propose toutes sortes de prestations de la vente à l'entretien
-       ou la réparation de votre véhicule :
-      <ul>
-        <li>Prestations mécaniques toute marque, y compris véhicules electriques et hybrides.</li>
-        <li>Prestations carrosseries toute marque.</li>
-        <li>Améliorations des performances.</li>
-      </ul>
-    </p>
-
-  </main>
-
-  <aside class="mx-2">
-    <h5>Derniers avis clients :</h5>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit quis libero cupiditate ratione! Iusto, corrupti impedit. Repellat fugiat quo architecto soluta autem fuga corporis non magnam. Doloribus in sunt officiis.</p>
+    <button type="button" class="btn btn-primary m-3 m-md-4">
+      <a href="contact.html" class="text-decoration-none">
+        Contactez-nous
+      </a>
+    </button>
   </aside>
+  <main class="d-md-flex flex-md-column align-items-md-center">
+    <div class="container-fluid d-md-flex ">
+      <img src="../img/hoonicorn.png" class="img-fluid col-md-6">
+      <div class="container-fluid d-md-flex flex-md-column justify-content-md-evenly">
+        <p class="text-center mt-3">Le garage V.Parrot vous propose toutes sortes de prestations de la vente à l'entretien
+          ou la réparation de votre véhicule :
+        <ul class="d-md-flex flex-md-column justify-content-md-between">
+          <li>Prestations mécaniques toute marque, y compris véhicules electriques et hybrides.</li>
+          <li>Prestations carrosseries toute marque.</li>
+          <li>Améliorations des performances.</li>
+        </ul>
+        </p>
+      </div>
+    </div>
+    <div class="mx-2 m-md-4 col-md-9">
+      <h5>Derniers avis clients :</h5>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit quis libero cupiditate ratione! Iusto,
+        corrupti impedit. Repellat fugiat quo architecto soluta autem fuga corporis non magnam. Doloribus in sunt
+        officiis.</p>
+    </div>
+  </main>
+  
+  
+
+  
 
   <footer class="bg-primary d-flex justify-content-center pt-2">
     <ul class="list-unstyled">
