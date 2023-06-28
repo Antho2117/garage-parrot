@@ -15,15 +15,15 @@
 
 </head>
 
-<body>
+<body class="bg-primary">
 
   <!-- Navbar -->
   <header>
-    <nav class="navbar navbar-dark navbar-expand-md bg-primary">     
+    <nav class="navbar navbar-dark navbar-expand-md bg-secondary">     
       <div class="container-fluid d-flex">     
 
         <!-- Main logo -->
-        <a href="index.html" class="col-8"><img src="../img/logo-no-background.png" class="img-fluid"></a>
+        <a href="index.html" class="col-8 col-md-9"><img src="../img/logo/logo-no-background.png" class="img-fluid"></a>
 
         <!-- Dropdown menu -->
         <button 
@@ -36,14 +36,8 @@
           aria-label="Toggle navigation"
         >
           <span>
-            <svg 
-              xmlns="http://www.w3.org/2000/svg" 
-              width="12" 
-              height="12" 
-              fill="black"
-              class="bi bi-three-dots-vertical" 
-              viewBox="0 0 16 16"
-            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="black"
+              class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
               <path
                 d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
             </svg>
@@ -51,7 +45,7 @@
         </button> 
       </div>
       <div class="collapse navbar-collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
-        <div class="bg-primary mx-2">
+        <div class="bg-secondary mx-2">
           <ul class="navbar-nav list-unstyled text-center">
             <li class="nav-item-2">
               <a href="index.html" class="nav-link text-decoration-none text-black">Accueil</a>
@@ -165,16 +159,16 @@
         aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header bg-success text-white">
               <h1 class="modal-title fs-5" id="formContactModalLabel">Demande envoyée</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body bg-primary">
               Votre demande est envoyée, nous y répondrons en moins de 48h. <br>
               Cordialement.
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <div class="modal-footer d-flex justify-content-center bg-success text-white">
+              <button type="button" class="btn btn-secondary border-0 bg-info text-white" data-bs-dismiss="modal">Close</button>
             </div>
           </div>
         </div>
@@ -183,7 +177,7 @@
 
   </main>
 
-  <footer class="bg-primary d-flex justify-content-center pt-3">
+  <footer class="bg-info text-primary d-flex justify-content-center pt-3">
     <ul class="list-unstyled">
       <h6>Horaires d'ouvertures</h6>
       <li>lundi 9h-12h, 13h30-17h</li>

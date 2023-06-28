@@ -15,15 +15,15 @@
 
 </head>
 
-<body>
+<body class="bg-primary">
 
   <!-- Navbar -->
   <header>
-    <nav class="navbar navbar-dark navbar-expand-md bg-primary">     
+    <nav class="navbar navbar-dark navbar-expand-md bg-secondary">     
       <div class="container-fluid d-flex">     
 
         <!-- Main logo -->
-        <a href="index.html" class="col-8"><img src="../img/logo-no-background.png" class="img-fluid"></a>
+        <a href="index.html" class="col-8 col-md-9"><img src="../img/logo/logo-no-background.png" class="img-fluid"></a>
 
         <!-- Dropdown menu -->
         <button 
@@ -45,7 +45,7 @@
         </button> 
       </div>
       <div class="collapse navbar-collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
-        <div class="bg-primary mx-2">
+        <div class="bg-secondary mx-2">
           <ul class="navbar-nav list-unstyled text-center">
             <li class="nav-item-2">
               <a href="index.html" class="nav-link text-decoration-none text-black">Accueil</a>
@@ -68,17 +68,17 @@
     </nav>
   </header>
 
-  
   <aside class="d-flex flex-column align-items-center">
+
     <!-- Modal car cards -->
     <div class="modal fade" id="carCardsModal" tabindex="-1" aria-labelledby="carCardsModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
-          <div class="modal-header">
+          <div class="modal-header bg-success text-white">
             <h1 class="modal-title fs-5" id="carCardsModalLabel">Titre du véhicule en dynamique</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="modal-body">  
+          <div class="modal-body bg-primary">  
             <p>Description dynamique du véhicule :<br>
               - modèle <br>
               - année <br>
@@ -87,9 +87,9 @@
               - prix <br>
               - couleur
             </p>
-            <img src="../img/hoonicorn.png" class="img-fluid" alt="hoonicorn">
-            <img src="../img/hoonicorn.png" class="img-fluid" alt="hoonicorn">
-            <img src="../img/hoonicorn.png" class="img-fluid" alt="hoonicorn">
+            <img src="../img/hoonicorn.png" class="img-fluid rounded mb-2" alt="hoonicorn">
+            <img src="../img/hoonicorn.png" class="img-fluid rounded mb-2" alt="hoonicorn">
+            <img src="../img/hoonicorn.png" class="img-fluid rounded mb-2" alt="hoonicorn">
             
             <!-- Form car infos -->
             <form>
@@ -111,7 +111,7 @@
               </div>
               <div class="mb-3">
                 <label for="object" class="form-label">Objet :</label>
-                <input type="text" class="form-control" id="object" placeholder="objet du message">
+                <input type="text" class="form-control" id="object" placeholder="objet du message en dynamique">
               </div>
               <div class="mb-3">
                 <label for="message" class="form-label">Message :</label>
@@ -119,10 +119,10 @@
               </div>
             </form>
           </div>
-          <div class="modal-footer d-flex justify-content-center">
+          <div class="modal-footer d-flex justify-content-center bg-success">
             <button 
               type="button" 
-              class="btn btn-secondary" 
+              class="btn btn-info text-white" 
               data-bs-dismiss="modal" 
               data-bs-target="#requestSendModal" 
               data-bs-toggle="modal"
@@ -153,49 +153,53 @@
         </div>
       </div>
     </div>
+
     <!-- Modal button for car search -->
-    <button type="button" class="btn btn-primary mt-4" data-bs-toggle="modal" data-bs-target="#searchFilterModal">
+    <button type="button" class="btn btn-secondary shadow-lg mt-4" data-bs-toggle="modal" data-bs-target="#searchFilterModal">
       Filtrer les recherches
     </button>
+
     <!-- Modal for car search -->
     <div class="modal fade" id="searchFilterModal" tabindex="-1" aria-labelledby="searchFilterModalLabel"
       aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
-          <div class="modal-header">
+          <div class="modal-header bg-success text-white">
             <h1 class="modal-title fs-5" id="searchFilterModalLabel">Filtrer les recherches</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="modal-body">
+          <div class="modal-body bg-primary">
             <ul>
               <li>prix
-                <p class="lh-sm mt-3">Min :<input type="text" class="border-0" placeholder="montant minimum"></p>
-                <p class="lh-sm">Max :<input type="text" class="border-0" placeholder="montant maximum"></p>
+                <p class="lh-sm mt-3">Min :<input type="text" class="border-0 bg-primary" placeholder="montant minimum"></p>
+                <p class="lh-sm">Max :<input type="text" class="border-0 bg-primary" placeholder="montant maximum"></p>
               </li>
               <li>Année
-                <p class="lh-sm mt-3">Min :<input type="text" class="border-0" placeholder="année minimum"></p>
-                <p class="lh-sm">Max :<input type="text" class="border-0" placeholder="année minimum"></p>
+                <p class="lh-sm mt-3">Min :<input type="text" class="border-0 bg-primary" placeholder="année minimum"></p>
+                <p class="lh-sm">Max :<input type="text" class="border-0 bg-primary" placeholder="année minimum"></p>
               </li>
               <li>Kilomètres
-                <p class="lh-sm mt-3">Min :<input type="text" class="border-0" placeholder="kms minimum"></p>
-                <p class="lh-sm">Max :<input type="text" class="border-0" placeholder="kms minimum"></p>
+                <p class="lh-sm mt-3">Min :<input type="text" class="border-0 bg-primary" placeholder="kms minimum"></p>
+                <p class="lh-sm">Max :<input type="text" class="border-0 bg-primary" placeholder="kms minimum"></p>
               </li>
             </ul>
           </div>
-          <div class="modal-footer d-flex justify-content-center">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">rechercher</button>
+          <div class="modal-footer d-flex justify-content-center bg-success">
+            <button type="button" class="btn btn-success bg-info text-white" data-bs-dismiss="modal">rechercher</button>
           </div>
         </div>
       </div>
     </div>
+
     <p class="text-center mt-3 mx-2">Tous les véhicules présentés sont en stock et disponibles de suite,
       n'hésitez pas à nous contacter pour plus de renseignements.
     </p>
   </aside>
+
+  <!-- Cars by card display -->
   <main class="container-fluid d-flex flex-column align-items-center flex-md-row flex-md-wrap justify-content-md-evenly">
-    <!-- Cars by card display -->
-    <div class="card mb-3 col-md-3" style="width: 18rem;">
-      <img src="../img/homepage.png" class="card-img-top" alt="iacar">
+    <div class="card shadow-lg mb-3 col-md-3" style="width: 18rem;">
+      <img src="../img/images-ia/homepage.png" class="card-img-top" alt="iacar">
       <div class="card-body d-flex flex-column">
         <h5 class="card-title">Voiture créée par ia</h5>
         <ul>
@@ -205,12 +209,12 @@
           <li>options : full options</li>
           <li>prix : 50000€</li>
         </ul>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+        <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
           data-bs-target="#carCardsModal">Détails</button>
       </div>
     </div>
-    <div class="card mb-3 col-md-3" style="width: 18rem;">
-      <img src="../img/homepage.png" class="card-img-top" alt="iacar">
+    <div class="card shadow-lg mb-3 col-md-3" style="width: 18rem;">
+      <img src="../img/images-ia/homepage.png" class="card-img-top" alt="iacar">
       <div class="card-body d-flex flex-column">
         <h5 class="card-title">Voiture créée par ia</h5>
         <ul>
@@ -220,12 +224,12 @@
           <li>options : full options</li>
           <li>prix : 50000€</li>
         </ul>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+        <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
           data-bs-target="#carCardsModal">Détails</button>
       </div>
     </div>
-    <div class="card mb-3 col-md-3" style="width: 18rem;">
-      <img src="../img/homepage.png" class="card-img-top" alt="iacar">
+    <div class="card shadow-lg mb-3 col-md-3" style="width: 18rem;">
+      <img src="../img/images-ia/homepage.png" class="card-img-top" alt="iacar">
       <div class="card-body d-flex flex-column">
         <h5 class="card-title">Voiture créée par ia</h5>
         <ul>
@@ -235,12 +239,12 @@
           <li>options : full options</li>
           <li>prix : 50000€</li>
         </ul>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+        <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
           data-bs-target="#carCardsModal">Détails</button>
       </div>
     </div>
-    <div class="card mb-3 col-md-3" style="width: 18rem;">
-      <img src="../img/homepage.png" class="card-img-top" alt="iacar">
+    <div class="card shadow-lg mb-3 col-md-3" style="width: 18rem;">
+      <img src="../img/images-ia/homepage.png" class="card-img-top" alt="iacar">
       <div class="card-body d-flex flex-column">
         <h5 class="card-title">Voiture créée par ia</h5>
         <ul>
@@ -250,12 +254,12 @@
           <li>options : full options</li>
           <li>prix : 50000€</li>
         </ul>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+        <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
           data-bs-target="#carCardsModal">Détails</button>
       </div>
     </div>
-    <div class="card mb-3 col-md-3" style="width: 18rem;">
-      <img src="../img/homepage.png" class="card-img-top" alt="iacar">
+    <div class="card shadow-lg mb-3 col-md-3" style="width: 18rem;">
+      <img src="../img/images-ia/homepage.png" class="card-img-top" alt="iacar">
       <div class="card-body d-flex flex-column">
         <h5 class="card-title">Voiture créée par ia</h5>
         <ul>
@@ -265,16 +269,13 @@
           <li>options : full options</li>
           <li>prix : 50000€</li>
         </ul>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+        <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
           data-bs-target="#carCardsModal">Détails</button>
       </div>
     </div>
   </main>
     
-
-  
-
-  <footer class="bg-primary d-flex justify-content-center pt-3">
+  <footer class="bg-info text-primary d-flex justify-content-center pt-3">
     <ul class="list-unstyled">
       <h6>Horaires d'ouvertures</h6>
       <li>lundi 9h-12h, 13h30-17h</li>
