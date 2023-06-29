@@ -1,5 +1,6 @@
+
 <footer class="bg-info text-primary d-flex justify-content-center pt-3">
-    <ul class="list-unstyled">
+    <ul class="list-unstyled text-center">
         <h6>Horaires d'ouvertures</h6>
         <li>lundi 9h-12h, 13h30-17h</li>
         <li>mardi 9h-12h, 13h30-17h</li>

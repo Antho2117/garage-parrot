@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
 
     <!-- Bootstrap installed with npm -->
     <link rel="stylesheet" href="main.css">
@@ -54,16 +54,16 @@
                         <a href="index.php" class="nav-link text-decoration-none text-black">Accueil</a>
                     </li>
                     <li class="nav-item-2">
-                        <a href="cars.php" class="nav-link text-decoration-none text-black">Voitures</a>
+                        <a href="view/cars.php" class="nav-link text-decoration-none text-black">Voitures</a>
                     </li>
                     <li class="nav-item-2">
-                        <a href="workshop.php" class="nav-link text-decoration-none text-black">Atelier</a>
+                        <a href="view/workshop.php" class="nav-link text-decoration-none text-black">Atelier</a>
                     </li>
                     <li class="nav-item-2">
-                        <a href="contact.php" class="nav-link text-decoration-none text-black">Contact</a>
+                        <a href="view/contact.php" class="nav-link text-decoration-none text-black">Contact</a>
                     </li>
                     <li class="nav-item-2">
-                        <a href="feedback.php" class="nav-link text-decoration-none text-black">Avis</a>
+                        <a href="view/feedback.php" class="nav-link text-decoration-none text-black">Avis</a>
                     </li>
                 </ul>
             </div>

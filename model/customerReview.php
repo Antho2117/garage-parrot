@@ -5,12 +5,15 @@ function getCustomerReview() {
     try {
         $database = new PDO('mysql:host=localhost;dbname=garage_parrot', 'root', '');
 
-        $statement = $database->query('SELECT 
-    customer_review_username, 
-    customer_review_date, 
-    customer_review_note, 
-    customer_review_text 
-FROM customer_review;');
+        $statement = $database->query('
+            SELECT 
+            customer_review_username, 
+            customer_review_date, 
+            customer_review_note, 
+            customer_review_text 
+            FROM 
+            customer_review;'
+        );
 
         $reviews = [];
         while($review = $statement->fetch(PDO::FETCH_ASSOC)){
