@@ -9,10 +9,12 @@ $success: #6F5B3E;
 $info: #171515;
 $link-color: black;
 
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 @import "node_modules/bootstrap/scss/bootstrap";
 
+$font-family-sans-serif: "Rubik", sans-serif;
 // Then add additional custom code here
 
 body {
-    --bs-body-font-family: rubik, sans-serif;
+    --bs-body-font-family: "Rubik", sans-serif;
 }

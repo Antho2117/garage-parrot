@@ -1,12 +1,12 @@
 <?php
 
-function getCustomerReview() {
+function getCustomerReview($pdo) {
 
     try {
-        $database = new PDO('mysql:host=localhost;dbname=garage_parrot', 'root', '');
 
-        $statement = $database->query('
+        $statement = $pdo->query('
             SELECT 
+            id_customer_review,
             customer_review_username, 
             customer_review_date, 
             customer_review_note, 
@@ -21,6 +21,7 @@ function getCustomerReview() {
                 'date' => $review['customer_review_date'],
                 'note' => $review['customer_review_note'],
                 'comment' => $review['customer_review_text'],
+                'id' => $review['id_customer_review']
             ];
             $reviews[] = $userReview;
         }
@@ -32,6 +33,5 @@ function getCustomerReview() {
         echo $e->getMessage();
 
     }
-
 
 }

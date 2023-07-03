@@ -9,16 +9,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
 
     <!-- Bootstrap installed with npm -->
     <link rel="stylesheet" href="main.css">
 
     <title>Garage V.Parrot</title>
 
+
 </head>
 
-<body class="bg-primary">
+<body class="bg-primary ">
 
 <!-- Navbar -->
 <header>
@@ -26,7 +27,7 @@
         <div class="container-fluid d-flex">
 
             <!-- Main logo -->
-            <a href="index.php" class="col-8 col-md-9"><img src="img/logo/logo-no-background.png" class="img-fluid" alt="car"></a>
+            <a href="index.php" class="col-8 col-md-9"><img src="assets/images/logo/logo-no-background.png" class="img-fluid" alt="car"></a>
 
             <!-- Dropdown menu -->
             <button
@@ -54,16 +55,16 @@
                         <a href="index.php" class="nav-link text-decoration-none text-black">Accueil</a>
                     </li>
                     <li class="nav-item-2">
-                        <a href="view/cars.php" class="nav-link text-decoration-none text-black">Voitures</a>
+                        <a href="cars.php" class="nav-link text-decoration-none text-black">Voitures</a>
                     </li>
                     <li class="nav-item-2">
-                        <a href="view/workshop.php" class="nav-link text-decoration-none text-black">Atelier</a>
+                        <a href="workshop.php" class="nav-link text-decoration-none text-black">Atelier</a>
                     </li>
                     <li class="nav-item-2">
-                        <a href="view/contact.php" class="nav-link text-decoration-none text-black">Contact</a>
+                        <a href="contact.php" class="nav-link text-decoration-none text-black">Contact</a>
                     </li>
                     <li class="nav-item-2">
-                        <a href="view/feedback.php" class="nav-link text-decoration-none text-black">Avis</a>
+                        <a href="feedback.php" class="nav-link text-decoration-none text-black">Avis</a>
                     </li>
                 </ul>
             </div>

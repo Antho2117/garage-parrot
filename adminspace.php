@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Bootstrap installed with npm -->
-    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="main.css">
 
     <title>Espace employé garage V.Parrot</title>
 
@@ -23,7 +23,7 @@
       <div class="container-fluid d-flex">     
 
         <!-- Main logo -->
-        <a href="mainpage.php" class="col-8 col-md-9"><img src="../img/logo/logo-no-background.png" class="img-fluid"></a>
+        <a href="lib/mainpage.php" class="col-8 col-md-9"><img src="assets/images/logo/logo-no-background.png" class="img-fluid" alt="car"></a>
 
         <!-- Dropdown menu -->
         <button 
@@ -48,19 +48,19 @@
         <div class="bg-primary mx-2">
           <ul class="navbar-nav list-unstyled text-center">
             <li class="nav-item-2">
-              <a href="mainpage.php" class="nav-link text-decoration-none text-black">Accueil</a>
+              <a href="lib/mainpage.php" class="nav-link text-decoration-none text-black">Accueil</a>
             </li>
             <li class="nav-item-2">
-              <a href="cars.php" class="nav-link text-decoration-none text-black">Voitures</a>
+              <a href="lib/cars.php" class="nav-link text-decoration-none text-black">Voitures</a>
             </li>
             <li class="nav-item-2">
-              <a href="workshop.php" class="nav-link text-decoration-none text-black">Atelier</a>
+              <a href="lib/workshop.php" class="nav-link text-decoration-none text-black">Atelier</a>
             </li>
             <li class="nav-item-2">
-              <a href="contact.php" class="nav-link text-decoration-none text-black">Contact</a>
+              <a href="lib/contact.php" class="nav-link text-decoration-none text-black">Contact</a>
             </li>
             <li class="nav-item-2">
-              <a href="feedback.php" class="nav-link text-decoration-none text-black">Avis</a>
+              <a href="lib/feedback.php" class="nav-link text-decoration-none text-black">Avis</a>
             </li>
           </ul>
         </div>
@@ -68,8 +68,40 @@
     </nav>
   </header>
 
-    <main class="container-fluid d-flex flex-column col-md-6 col-lg-5 col-xl-4 mt-4">
-        <h3 class="text-center">Bonjour "employé", nous sommes le "date du jour", il est "heure du jour".</h3>
+    <main class="container-fluid d-flex flex-column flex-md-wrap col-md-6 col-lg-5 col-xl-4 mt-4">
+        <h3 class="text-center">Bonjour Mr Parrot, nous sommes le "date du jour", il est "heure du jour".</h3>
+        <button 
+            type="button" 
+            class="btn btn-primary my-3" 
+            data-bs-toggle="modal" 
+            data-bs-target="#inprogressModal"
+        >
+            Modifier les horaires
+        </button>
+        <button 
+            type="button" 
+            class="btn btn-primary my-3" 
+            data-bs-toggle="modal" 
+            data-bs-target="#inprogressModal"
+        >
+            Gérer les services
+        </button>
+        <button 
+            type="button" 
+            class="btn btn-primary my-3" 
+            data-bs-toggle="modal" 
+            data-bs-target="#inprogressModal"
+        >
+            Gérer les comptes employé
+        </button>
+        <button 
+            type="button" 
+            class="btn btn-primary my-3" 
+            data-bs-toggle="modal" 
+            data-bs-target="#inprogressModal"
+        >
+            Statistiques du site
+        </button>        
         <button 
             type="button" 
             class="btn btn-secondary my-3" 
@@ -130,9 +162,9 @@
     <noscript>Veuillez activer JavaScript pour profiter de toutes les fonctionnalités de notre site.</noscript>
 
     <!-- Include JavaScript -->
-    <script src="../index.js"></script>
+    <script src="index.js"></script>
 
     <!-- Include Bootstrap -->
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

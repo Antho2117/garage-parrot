@@ -1,6 +1,11 @@
+<?php
 
-  <!-- Modal useropinion -->
-  <div class="modal fade" id="useropinion" aria-hidden="true" aria-labelledby="useropinionLabel" tabindex="-1">
+require_once __DIR__."/templates/header.php";
+
+?>
+
+<!-- Modal useropinion -->
+<div class="modal fade" id="useropinion" aria-hidden="true" aria-labelledby="useropinionLabel" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header bg-success text-white">
@@ -30,8 +35,8 @@
     </div>
   </div>
 
-  <!-- Modal send user opinion -->
-  <div class="modal fade" id="senduseropinion" aria-hidden="true" aria-labelledby="senduseropinionLabel" tabindex="-1">
+<!-- Modal send user opinion -->
+<div class="modal fade" id="senduseropinion" aria-hidden="true" aria-labelledby="senduseropinionLabel" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header bg-success text-white">
@@ -48,7 +53,7 @@
     </div>
   </div>
 
-  <main class="container-fluid d-md-flex flex-md-row-reverse col-xl-9 p-md-4">
+<main class="container-fluid d-md-flex flex-md-row-reverse col-xl-9 p-md-4">
 
     <!-- Start modal form -->
     <div class="d-flex flex-column align-items-center justify-content-md-center col-md-6 mt-4">
@@ -221,3 +226,7 @@
       </div>
     </div>  
   </main>
+
+<?php
+
+require_once __DIR__."/templates/footer.php";

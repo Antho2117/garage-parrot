@@ -1,5 +1,10 @@
+<?php
 
-  <aside>
+require_once __DIR__."/templates/header.php";
+
+?>
+
+<aside>
     <h2 class="text-center pt-4">Notre atelier</h2>
     <p class="text-center pt-2">Pour un traitement plus rapide, vous pouvez nous appeler au
     <a href="tel:+01234567890">
@@ -11,10 +16,10 @@
       0123456789
     </a>
     </p>
-  </aside>
+</aside>
 
-  <!-- Form -->
-  <main class="my-md-5">
+<!-- Form -->
+<main class="my-md-5">
     <form class="container-fluid col-md-6 col-lg-5 col-xl-4">
       <div class="my-3">
         <label for="service" class="form-label">Quel genre de prestation désirez-vous :</label>
@@ -65,4 +70,8 @@
         </div>
       </div>
     </div>
-  </main>
+</main>
+
+<?php
+
+require_once __DIR__."/templates/footer.php";

@@ -1,4 +1,63 @@
+<?php
 
+require_once __DIR__."/lib/config.php";
+require_once __DIR__."/lib/pdo.php";
+require_once __DIR__."/templates/header.php";
+
+
+if (!empty($_POST)) {
+    if (!empty($_POST["lastname"])) {
+        if (!empty($_POST["firstname"])) {
+            if (!empty($_POST["email"])) {
+                filter_var($_POST["email"], FILTER_VALIDATE_EMAIL);
+                if (!empty($_POST["phone"])) {
+                    if (!empty($_POST["message"])) {
+
+                        // Anti-Xss format
+                        $lastname = htmlSpecialChars($_POST["lastname"]);
+                        $firstname = htmlSpecialChars($_POST["firstname"]);
+                        $email = htmlSpecialChars($_POST["email"]);
+                        $phone = htmlSpecialChars($_POST["phone"]);
+                        $message = htmlSpecialChars($_POST["message"]);
+
+                        $sql = "INSERT INTO 
+                                customer (
+                                    customer_firstname, 
+                                    customer_lastname, 
+                                    customer_email, 
+                                    customer_phone,
+                                    id_garage
+                                    ) 
+                                VALUES (:firstname, :lastname, :email, :phone, 1);";
+                        $query = $pdo->prepare($sql);
+                        $query->bindValue(":firstname", $firstname);
+                        $query->bindValue(":lastname", $lastname);
+                        $query->bindValue(":email", $email);
+                        $query->bindValue(":phone", $phone);
+
+                        $query->execute();
+
+                    } else {
+                        echo "Veuillez entrer un message";
+                    }
+                } else {
+                    echo "Veuillez entrer un numéro de téléphone";
+                }
+            } else {
+                echo "Veuillez renseigner un email";
+            }
+        } else {
+            echo "Veuillez renseigner un prénom";
+        }
+    } else {
+        echo "Veuillez renseigner un nom";
+    }
+} else {
+    echo "Formulaire incomplet";
+}
+
+
+?>
   <main class=" container-fluid d-md-flex">
     <div class=" col-md-6 mt-md-3 p-md-3">
 
@@ -54,34 +113,34 @@
     
     <!-- Contact form -->
     <aside class="col-md-6">
-      <form class="container-fluid mt-4 p-md-3">
+      <form method="post" class="container-fluid mt-4 p-md-3">
         <h3>Formulaire de contact</h3>
         <div class="mb-3">
           <label for="lastname" class="form-label">Nom :</label>
-          <input type="text" class="form-control" id="lastname" placeholder="votre nom">
+          <input type="text" class="form-control" id="lastname" name="lastname" placeholder="votre nom">
         </div>
         <div class="mb-3">
           <label for="firstname" class="form-label">Prénom :</label>
-          <input type="text" class="form-control" id="firstname" placeholder="votre prénom">
+          <input type="text" class="form-control" id="firstname" name="firstname" placeholder="votre prénom">
         </div>
         <div class="mb-3">
           <label for="email" class="form-label">Email :</label>
-          <input type="email" class="form-control" id="email" placeholder="name@example.com">
+          <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
         </div>
         <div class="mb-3">
           <label for="phone" class="form-label">Téléphone :</label>
-          <input type="text" class="form-control" id="phone" placeholder="0123456789">
+          <input type="text" class="form-control" id="phone" name="phone" placeholder="0123456789">
         </div>
         <div class="mb-3">
           <label for="message" class="form-label">Message :</label>
-          <textarea class="form-control" id="message" rows="5"></textarea>
+          <textarea class="form-control" id="message" name="message" rows="5"></textarea>
         </div>
     
         <!-- Submit form button -->
         <div class="d-flex justify-content-center">
-          <button type="button" class="btn btn-secondary mb-3" data-bs-toggle="modal" data-bs-target="#formContactModal">
-            Envoyer
-          </button>
+            <button type="submit" class="btn btn-secondary mb-3" data-bs-toggle="modal" data-bs-target="#formContactModal">
+                Envoyer
+            </button>
         </div>
       </form>
 
@@ -108,3 +167,6 @@
 
   </main>
 
+<?php
+
+require_once __DIR__."/templates/footer.php";
