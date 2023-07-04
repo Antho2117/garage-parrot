@@ -115,7 +115,7 @@ $cars = [
                             <input type="text" class="border-0 bg-primary" id="maximumPrice" placeholder="montant maximum">
                         </label>
                     </li>
-                    <li>Année<br>
+                    <li class="mb-2">Année<br>
                         <label class="lh-sm my-3" for="minimumYear">Min :
                             <input type="text" class="border-0 bg-primary" id="minimumYear" placeholder="année minimum">
                         </label>
@@ -123,7 +123,7 @@ $cars = [
                             <input type="text" class="border-0 bg-primary" id="maximumYear" placeholder="année minimum">
                         </label>
                     </li>
-                    <li>Kilomètres<br>
+                    <li class="mb-2">Kilomètres<br>
                         <label class="lh-sm my-3" for="minimumKilometers">Min :
                             <input type="text" class="border-0 bg-primary" id="minimumKilometers" placeholder="kms minimum">
                         </label>
