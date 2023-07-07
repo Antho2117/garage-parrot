@@ -1,6 +1,6 @@
 <?php
-require_once __DIR__."/lib/config.php";
-require_once __DIR__."/templates/privateHeader.php";
+//require_once __DIR__ . "/lib/config.php";
+require_once __DIR__."/privateHeader.php";
 var_dump($_FILES);
 
     if (isset($_POST["send"])) {
@@ -23,9 +23,12 @@ var_dump($_FILES);
         <input type="file" name="upload" id="upload">
         <button type="submit" name="send" value="send">Envoyer</button>
     </form>
+    <button type="button" class="btn btn-secondary my-3 border-0 bg-info text-white">
+        <a href="<?= _BASE_USERSPACE_URL ?>/profile" class="text-white">Retour</a>
+    </button>
 </main>
 
 
 <?php
 
-require_once __DIR__."/templates/privateFooter.php";
+require_once __DIR__."/privateFooter.php";

@@ -1,6 +1,6 @@
 <?php
 
-require_once "models/User.php";
+require_once "models/Employee.php";
 $email = $_POST["email"];
 $user = new User($email);
 

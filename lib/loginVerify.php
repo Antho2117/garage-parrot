@@ -1,17 +1,13 @@
 <?php
 
-function createNewUser()
-{
-
-
-
-}
-
-function verifyUserLoginData(PDO $pdo)
+function verifyUserLoginData()
 {
     try {
         if (isset($_POST)) {
             if (!empty($_POST["workEmail"]) && !empty($_POST["password"])) {
+
+                $pdo = new PDO("mysql:host=localhost;dbname=garage_parrot;charset=utf8mb4", "root", "");
+
                 $sql = "SELECT employee_email, employee_password FROM employee WHERE employee_email = :email;";
 
                 $query = $pdo->prepare($sql);

@@ -1,11 +1,6 @@
 <?php
 
-//require_once __DIR__."/lib/config.php";
-//require_once __DIR__."/lib/pdo.php";
 require_once __DIR__."/privateHeader.php";
-//require_once __DIR__."/lib/loginVerify.php";
-
-//$connexion = verifyUserLoginData($pdo);
 
 ?>
 
@@ -22,7 +17,7 @@ require_once __DIR__."/privateHeader.php";
             <input type="password" class="form-control" id="password" name="password">
         </div>
         <div class="d-flex justify-content-center">
-            <button type="submit" class="btn btn-secondary text-black mt-4" value="login">Se connecter</button>
+            <button type="submit" class="btn btn-secondary text-black mt-4">Se connecter</button>
         </div>
     </form>
 </main>

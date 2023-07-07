@@ -27,7 +27,7 @@ require_once __DIR__."/privateHeader.php";
         data-bs-toggle="modal"
         data-bs-target="#inProgressModal"
     >
-        <a href="manageEmployee.php" class="text-white">
+        <a href="<?= _BASE_USERSPACE_URL ?>/employee" class="text-white">
             Gérer les comptes employé
         </a>
     </button>
@@ -61,7 +61,7 @@ require_once __DIR__."/privateHeader.php";
         data-bs-toggle="modal"
         data-bs-target="#inProgressModal"
     >
-        <a href="carSaleManagement.php" >Gérer le parc automobiles</a>
+        <a href="<?= _BASE_USERSPACE_URL ?>/sales" >Gérer le parc automobiles</a>
     </button>
     <button
         type="button"

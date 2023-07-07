@@ -1,10 +1,10 @@
 <?php
 
-require_once __DIR__."/lib/config.php";
-require_once __DIR__."/lib/pdo.php";
-require_once __DIR__."/templates/privateHeader.php";
-require_once __DIR__."/lib/createEmployee.php";
+//require_once __DIR__ . "/lib/config.php";
+require_once __DIR__."/privateHeader.php";
+//require_once __DIR__ . "/lib/tools.php";
 
+//$pdo = getPDO();
 ?>
 
 <main class="container-fluid d-flex flex-column flex-md-wrap col-md-6 col-lg-5 col-xl-4 mt-4">
@@ -25,10 +25,10 @@ require_once __DIR__."/lib/createEmployee.php";
             <span>Sexe :</span>
             <div class="d-flex align-items-center">
                 <label for="mister" class="form-label">Monsieur
-                    <input type="radio" id="mister" name="gender" value="mister">
+                    <input type="radio" id="mister" name="gender" value="monsieur">
                 </label>
                 <label for="miss" class="form-label">Madame
-                    <input type="radio" id="miss" name="gender" value="miss">
+                    <input type="radio" id="miss" name="gender" value="madame">
                 </label>
             </div>
             <label for="garage" class="form-label">Identifiant garage :</label>
@@ -60,8 +60,11 @@ require_once __DIR__."/lib/createEmployee.php";
     >
         Supprimer un employé
     </button>
+    <button type="button" class="btn btn-secondary my-3 border-0 bg-info text-white">
+        <a href="<?= _BASE_USERSPACE_URL ?>/profile" class="text-white">Retour</a>
+    </button>
 </main>
 
 <?php
 
-require_once __DIR__."/templates/privateFooter.php";
+require_once __DIR__."/privateFooter.php";

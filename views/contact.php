@@ -1,11 +1,7 @@
 <?php
 
-//require_once __DIR__."/lib/config.php";
-//require_once __DIR__."/lib/pdo.php";
 require_once __DIR__."/header.php";
-//require_once __DIR__."/lib/validateFormContact.php";
 
-//$contact = validateFormContact($pdo);
 ?>
 <main class=" container-fluid d-md-flex">
     <div class=" col-md-6 mt-md-3 p-md-3">
@@ -60,6 +56,14 @@ require_once __DIR__."/header.php";
     <aside class="col-md-6">
         <form method="post" action="<?php $contact; ?>" class="container-fluid mt-4 p-md-3">
             <h3>Formulaire de contact</h3>
+            <div class="d-flex align-items-center">
+                <label for="mister" class="form-label m-2">Monsieur
+                    <input type="radio" id="mister" name="gender" value="monsieur">
+                </label>
+                <label for="miss" class="form-label m-2">Madame
+                    <input type="radio" id="miss" name="gender" value="madame">
+                </label>
+            </div>
             <div class="mb-3">
                 <label for="lastname" class="form-label">Nom :</label>
                 <input type="text" class="form-control" id="lastname" name="lastname" placeholder="votre nom">

@@ -1,13 +1,6 @@
 <?php
 
-//require_once __DIR__."/lib/config.php";
-//require_once __DIR__."/lib/pdo.php";
 require_once __DIR__."/header.php";
-//require_once __DIR__."/lib/customerReview.php";
-//require_once __DIR__."/lib/validateFormFeedback.php";
-
-//$feedback = validateFormFeedback($pdo);
-//$reviews = getCustomerReview($pdo);
 
 ?>
 
@@ -17,7 +10,7 @@ require_once __DIR__."/header.php";
             Pour publier un avis, cliquez sur le bouton ci-dessous. Vous pouvez aussi consulter les avis en dessous de
             celui-ci.
         </h5>
-        <form method="post" action="<?php $feedback; ?>">
+        <form method="post">
             <div class="mb-3">
                 <label for="username" class="form-label">Veuillez indiquer votre nom :</label>
                 <input type="text" class="form-control" id="username" name="username" placeholder="votre nom">
@@ -31,7 +24,7 @@ require_once __DIR__."/header.php";
                 <textarea class="form-control" id="opinion" name="opinion" rows="5" placeholder="Veuillez rédiger votre avis"></textarea>
             </div>
             <div class="mb-3 d-flex flex-column align-items-center">
-                <button type="submit" class="btn btn-secondary d-flex flex-column align-items-center">Envoyer</button>
+                <button type="submit" class="btn btn-secondary d-flex flex-column align-items-center" value="<?= _BASE_URL_ ?>/feedback">Envoyer</button>
             </div>
         </form>
     </div>
