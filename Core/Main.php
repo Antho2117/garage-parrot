@@ -6,6 +6,7 @@ class Main
 {
     public function start()
     {
+        session_start();
         // On récupère l'adresse
         $uri = $_SERVER['REQUEST_URI'];
 
