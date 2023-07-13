@@ -13,7 +13,7 @@ class Form
     {
         foreach($fields as $field)
         {
-            if(empty($form[$field])){
+            if(!isset($form[$field])){
                 return false;
             }
             return true;
