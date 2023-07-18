@@ -9,3 +9,7 @@ function deleteStaff(){
 function deleteCar(){
     confirm("Confirmez-vous la suppression du véhicule?");
 }
+
+function deleteReview(){
+    confirm("Confirmez-vous la suppression du commentaire?");
+}
