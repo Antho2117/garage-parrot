@@ -14,13 +14,14 @@
 
 <!-- Form -->
 <main class="my-md-5">
-    <form method="POST" action="" class="container-fluid col-md-6 col-lg-5 col-xl-4"><div class="my-3">
+    <form method="POST" action="" class="container-fluid col-md-6 col-lg-5 col-xl-4">
+        <div class="my-3">
             <label for="service" class="form-label">Quel genre de prestation désirez-vous :</label>
             <select class="form-select" id="service" name="service" aria-label="Default select">
                 <option selected>selectionnez une prestation</option>
-                <option value="1">Prestation mécanique</option>
-                <option value="2">Prestation carrosserie</option>
-                <option value="3">Augmentation de performance</option>
+                <option value="mechanic">Prestation mécanique</option>
+                <option value="body">Prestation carrosserie</option>
+                <option value="increased">Augmentation de performance</option>
             </select>
         </div>
         <div class="mb-3">
@@ -28,8 +29,16 @@
             <input type="text" class="form-control" id="immatriculation" name="immatriculation" placeholder="AB-123-CD">
         </div>
         <div class="mb-3">
-            <label for="bookingDate" class="form-label">Quelle est la date souhaitée :</label>
+            <label for="bookingDate" class="form-label">Quand souhaitez-vous venir :</label>
             <input type="date" class="form-control" id="bookingDate" name="bookingDate" placeholder="AAAA/MM/JJ">
+        </div>
+        <div class="my-3">
+            <label for="schedule" class="form-label">Le matin ou l'après-midi :</label>
+            <select class="form-select" id="schedule" name="schedule" aria-label="Default select">
+                <option selected>selectionnez un créneau horaire</option>
+                <option value="1">09h00 - 12h30</option>
+                <option value="2">13h30 - 17h00</option>
+            </select>
         </div>
         <div class="mb-3">
             <label for="phone" class="form-label">Votre numéro de téléphone :</label>

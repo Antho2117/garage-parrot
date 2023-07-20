@@ -72,11 +72,9 @@
     </nav>
 </header>
 
-
-<div class="container">
+<div>
     <?php echo $content; ?>
 </div>
-
 
 <footer class="bg-info text-primary d-flex justify-content-center pt-3">
     <ul class="list-unstyled text-center">
@@ -87,6 +85,7 @@
         <li>jeudi 9h-12h, 13h30-17h</li>
         <li>vendredi 9h-12h, 13h30-17h</li>
         <li>samedi 9h-18h</li>
+        <li>dimanche fermé</li>
     </ul>
 </footer>
 
@@ -96,6 +95,7 @@
 <script src="<?= ROOT ?>/index.js"></script>
 
 <!-- Include Bootstrap -->
-<script src=<?= ROOT ?>/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js>
+<script src=<?= ROOT ?>/node_modules/bootstrap/dist/js/bootstrap.bundle.js></script>
+
 </body>
 </html>

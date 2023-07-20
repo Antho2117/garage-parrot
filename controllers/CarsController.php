@@ -1,14 +1,22 @@
 <?php
 
-class CarsController
+namespace App\Controllers;
+
+use App\Models\CarsModel;
+
+class CarsController extends Controller
 {
-    public function carsIndex()
+    public function index()
     {
-        require_once "views/cars.php";
+        $carsModel = new CarsModel();
+
+        $cars = $carsModel->findAll(); //mettre une pagination
+
+        $this->render("cars/index", ["cars" => $cars]);
     }
 
-    public function carSaleIndex()
+    public function sendForm()
     {
-        require_once "views/carSaleManagement.php";
+            header("location:".ROOT."/home");
     }
 }

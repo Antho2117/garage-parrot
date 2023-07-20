@@ -1,7 +1,5 @@
 <?php
 
-namespace App\Core;
-
 class Main
 {
     public function start()
@@ -48,8 +46,8 @@ class Main
         }else{
             // Ici aucun paramètre n'est défini
             // On instancie le contrôleur par défaut (page d'accueil)
-            $controller = new Controllers\MainController();
-
+            $controller = new App\Controllers\HomeController;
+            //$controller = Controller::Controller();
             // On appelle la méthode index
             $controller->index();
         }

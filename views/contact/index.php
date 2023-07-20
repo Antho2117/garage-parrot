@@ -49,7 +49,7 @@
 
     <!-- Contact form -->
     <aside class="col-md-6">
-        <form method="POST" action="<?php $contact; ?>" class="container-fluid mt-4 p-md-3">
+        <form method="POST" class="container-fluid mt-4 p-md-3">
             <h3>Formulaire de contact</h3>
             <div class="d-flex align-items-center">
                 <label for="mister" class="form-label m-2">Monsieur

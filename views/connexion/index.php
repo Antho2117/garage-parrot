@@ -1,5 +1,10 @@
+<?php if(!empty($_SESSION["error"])): ?>
+    <div class="alert alert-danger mt-3 d-flex justify-content-center" role="alert">
+        <?php echo $_SESSION["error"]; unset($_SESSION["error"]); ?>
+    </div>
+<?php endif; ?>
 <main class="container-fluid col-md-9 col-lg-7 col-xl-5">
-    <form method="POST" action="">
+    <form method="POST">
         <h2 class="text-center my-5">Espace salarié</h2>
         <div class="mb-4">
             <label for="workEmail" class="form-label">Email address :</label>

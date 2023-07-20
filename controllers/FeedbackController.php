@@ -1,100 +1,31 @@
 <?php
 
-class FeedbackController
+namespace App\Controllers;
+
+use App\Core\Form;
+use App\Models\CustomerReviewsModel;
+
+class FeedbackController extends Controller
 {
-    public function feedbackIndex()
+    public function index()
     {
-        $reviews = $this->getCustomerReview();
-        require_once "views/feedback.php";
-    }
+        if(Form::validateForm($_POST, ["username", "rating", "opinion"])){
 
-    public function validateFormFeedback()
-    {
-        if(!empty($_POST["username"])){
-            if(!empty($_POST["rating"])){
-                if(!empty($_POST["opinion"])){
-                    try {
+            $username = htmlspecialchars($_POST["username"]);
+            $note = htmlspecialchars($_POST['rating']);
+            $comment = htmlspecialchars($_POST["opinion"]);
 
-                        $pdo = new PDO("mysql:host=localhost;dbname=garage_parrot;charset=utf8mb4", "root", "");
+            $review = new CustomerReviewsModel;
 
-                        // Anti Xss format
-                        $username = htmlSpecialChars($_POST["username"]);
-                        $rating = htmlSpecialChars($_POST["rating"]);
-                        $opinion = htmlSpecialChars($_POST["opinion"]);
+            $review->createReviews($username, $note, $comment);
 
-                        $sql = "INSERT INTO customer_review (
-                        customer_review_username, 
-                        customer_review_date, 
-                        customer_review_note, 
-                        customer_review_text) 
-                        VALUES (:username, NOW(), :rating, :opinion);";
-
-                        $query = $pdo->prepare($sql);
-
-                        $query->bindValue(":username", $username);
-                        $query->bindValue(":rating", $rating, PDO::PARAM_INT);
-                        $query->bindValue(":opinion", $opinion);
-
-
-
-                        if(!$query->execute())
-                        {
-                            header("HTTP/1.1 404 not found");
-                        } else {
-                            header("location:"._BASE_URL_."/feedback");
-                        }
-
-                    } catch (Exception $e){
-                        echo $e->getMessage();
-                    }
-                } else {
-                    echo "Merci de laisser un message";
-                }
-            } else {
-                echo "Veuillez entrer une note";
-            }
         } else {
-            echo "Veuillez entrer un nom";
+
+            $customerReviews = new CustomerReviewsModel;
+
+            $reviews = $customerReviews->findByLimit();
+
+            $this->render("feedback/index", ["reviews" => $reviews]);
         }
-    }
-
-    public function getCustomerReview() {
-
-        try {
-
-            $pdo = new PDO("mysql:host=localhost;dbname=garage_parrot;charset=utf8mb4", "root", "");
-
-            $query = $pdo->query("
-            SELECT 
-            id_customer_review,
-            customer_review_username, 
-            customer_review_date, 
-            customer_review_note, 
-            customer_review_text 
-            FROM 
-            customer_review
-            ORDER BY customer_review_date
-            LIMIT 6;"
-            );
-
-            $reviews = [];
-            while($review = $query->fetch(PDO::FETCH_ASSOC)){
-                $userReview =["author" => $review["customer_review_username"],
-                    "date" => $review["customer_review_date"],
-                    "note" => $review["customer_review_note"],
-                    "comment" => $review["customer_review_text"],
-                    "id" => $review["id_customer_review"]
-                ];
-                $reviews[] = $userReview;
-            }
-
-            return $reviews;
-
-        } catch(Exception $e){
-
-            echo $e->getMessage();
-
-        }
-
     }
 }

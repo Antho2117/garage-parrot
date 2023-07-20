@@ -1,1 +1,0 @@
-<h2>Page d'accueil des annonces</h2>

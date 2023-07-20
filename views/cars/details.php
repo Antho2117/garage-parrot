@@ -1,1 +1,0 @@
-<h1>Détails du véhicule : <?= $this->car['brand']; ?></h1>

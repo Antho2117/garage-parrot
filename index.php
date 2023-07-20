@@ -2,7 +2,7 @@
 
 // On définit une constante contenant le dossier racine
 const ROOT = "/gvp";
-const BASE_UPLOADS = "/Applications/XAMPP/xamppfiles/htdocs".ROOT."/uploads/";
+const BASE_UPLOADS = "/Applications/MAMP/htdocs".ROOT."/uploads/";
 // On importe les namespaces nécessaires
 use App\Autoloader;
 use App\Core\Main;

@@ -1,8 +1,14 @@
-<main class="container-fluid d-flex flex-column flex-md-wrap col-md-6 col-lg-5 col-xl-4 mt-4">
-    <h3 class="text-center">Bonjour Mr Parrot, nous sommes le .</h3>
+<main class="container-fluid d-flex flex-column col-md-6 col-lg-5 col-xl-4 mt-4">
+    <?php if(!empty($_SESSION["success"])): ?>
+        <div class="alert alert-info mt-3 text-center fs-4" role="alert">
+            <?php echo $_SESSION["success"]; unset($_SESSION["success"]); ?>
+        </div>
+    <?php else : ?>
+        <h3 class="text-center">Nous sommes le <?= date("d-m-Y") ?>.</h3>
+    <?php endif; ?>
     <button
         type="button"
-        class="btn btn-success text-white my-3"
+        class="btn btn-success text-white my-3 text-decoration-line-through"
         data-bs-toggle="modal"
         data-bs-target="#inProgressModal"
     >
@@ -10,7 +16,7 @@
     </button>
     <button
         type="button"
-        class="btn btn-success text-white my-3"
+        class="btn btn-success text-white my-3 text-decoration-line-through"
         data-bs-toggle="modal"
         data-bs-target="#inProgressModal"
     >
@@ -19,16 +25,14 @@
     <button
         type="button"
         class="btn btn-success text-white my-3"
-        data-bs-toggle="modal"
-        data-bs-target="#inProgressModal"
     >
-        <a href="<?= ROOT ?>/profile/employee" class="text-white text-decoration-none">
+        <a href="<?= ROOT ?>/admin/employee" class="text-white text-decoration-none">
             Gérer les comptes employé
         </a>
     </button>
     <button
         type="button"
-        class="btn btn-success text-white my-3"
+        class="btn btn-success text-white my-3 text-decoration-line-through"
         data-bs-toggle="modal"
         data-bs-target="#inProgressModal"
     >
@@ -37,14 +41,14 @@
     <button
         type="button"
         class="btn btn-secondary my-3"
-        data-bs-toggle="modal"
-        data-bs-target="#inProgressModal"
     >
-        Gérer les avis clients
+        <a href="<?= ROOT ?>/admin/reviews" class="text-black text-decoration-none">
+            Gérer les avis clients
+        </a>
     </button>
     <button
         type="button"
-        class="btn btn-secondary my-3"
+        class="btn btn-secondary my-3 text-decoration-line-through"
         data-bs-toggle="modal"
         data-bs-target="#inProgressModal"
     >
@@ -53,21 +57,22 @@
     <button
         type="button"
         class="btn btn-secondary my-3"
-        data-bs-toggle="modal"
-        data-bs-target="#inProgressModal"
     >
-        <a href="<?= ROOT ?>/profile/cars" class="text-decoration-none">Gérer le parc automobiles</a>
+        <a href="<?= ROOT ?>/admin/cars" class="text-decoration-none">
+            Gérer le parc automobiles
+        </a>
     </button>
     <button
         type="button"
         class="btn btn-secondary my-3"
-        data-bs-toggle="modal"
-        data-bs-target="#inProgressModal"
+
     >
-        Gérer mon compte
+        <a href="<?= ROOT ?>/admin/userAccount" class="text-decoration-none">
+            Gérer mon compte
+        </a>
     </button>
     <button type="button" class="btn btn-danger my-3">
-        <a href="<?= ROOT ?>/connexion" class="text-decoration-none">
+        <a href="<?= ROOT ?>/admin/logout" class="text-decoration-none">
             Se déconnecter
         </a>
     </button>

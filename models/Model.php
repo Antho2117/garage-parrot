@@ -6,12 +6,30 @@ use App\Core\Db;
 
 class Model extends Db
 {
-    // Table de la base de données
     protected $table;
 
-    // Instance de Db
     private $db;
 
+    public function checkImage($image)
+    {
+        $extensions = ["image/jpeg"];
+
+        if(isset($image) && !isset($image["error"])){
+            $fileInfo = pathinfo($image["name"]);
+            if($image["size"] < 200000){
+                if(in_array($image["type"], $extensions)){
+                    move_uploaded_file($image["tmp_name"], ROOT."/uploads/".$fileInfo);
+                    return ROOT."/uploads/".$fileInfo;
+                } else {
+                    echo "Déplacement impossible";
+                }
+            } else {
+                echo "Fichier trop volumineux";
+            }
+        } else {
+            echo "Une erreur est survenue lors de l'envoi du fichier";
+        }
+    }
 
     public function findAll()
     {
@@ -53,7 +71,7 @@ class Model extends Db
         // On boucle pour éclater le tableau
         foreach($this as $champ => $valeur){
             // INSERT INTO annonces (titre, description, actif) VALUES (?, ?, ?)
-            if($valeur != null && $champ != 'db' && $champ != 'table'){
+            if($valeur !== null && $champ != 'db' && $champ != 'table'){
                 $champs[] = $champ;
                 $inter[] = "?";
                 $valeurs[] = $valeur;
@@ -95,7 +113,6 @@ class Model extends Db
         return $this->requete("DELETE FROM {$this->table} WHERE id = ?", [$id]);
     }
 
-
     public function requete(string $sql, array $attributs = null)
     {
         // On récupère l'instance de Db
@@ -113,8 +130,7 @@ class Model extends Db
         }
     }
 
-
-    public function hydrate(array $donnees)
+    public function hydrate($donnees)
     {
         foreach($donnees as $key => $value){
             // On récupère le nom du setter correspondant à la clé (key)
