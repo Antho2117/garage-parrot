@@ -50,7 +50,7 @@ class Main
             // Ici aucun paramètre n'est défini
             // On instancie le contrôleur par défaut (page d'accueil)
             $controller = new HomeController;
-            //$controller = Controller::Controller();
+
             // On appelle la méthode index
             $controller->index();
         }

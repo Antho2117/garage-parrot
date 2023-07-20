@@ -14,14 +14,14 @@ class Db extends PDO
 
     // mysql://b81e1b7df39651:a1269857@us-cdbr-east-06.cleardb.net/heroku_1cc35ad065a2d91?reconnect=true
 
-    //private const DBHOST = 'us-cdbr-east-06.cleardb.net';
-    private const DBHOST = 'localhost';
-    //private const DBUSER = 'b81e1b7df39651';
-    private const DBUSER = 'root';
-    //private const DBPASS = 'a1269857';
-    private const DBPASS = 'root';
-    //private const DBNAME = 'heroku_1cc35ad065a2d9';
-    private const DBNAME = 'garage_parrot';
+    private const DBHOST = 'us-cdbr-east-06.cleardb.net';
+    //private const DBHOST = 'localhost';
+    private const DBUSER = 'b81e1b7df39651';
+    //private const DBUSER = 'root';
+    private const DBPASS = 'a1269857';
+    //private const DBPASS = 'root';
+    private const DBNAME = 'heroku_1cc35ad065a2d9';
+    //private const DBNAME = 'garage_parrot';
 
 
     private function __construct()
