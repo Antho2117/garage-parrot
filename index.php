@@ -1,6 +1,7 @@
 <?php
 
-use App\Autoloader;
+namespace App;
+use App\Core\Main;
 
 // On définit une constante contenant le dossier racine
 const ROOT = "/gvp";
@@ -12,7 +13,7 @@ require_once 'Autoloader.php';
 Autoloader::register();
 
 // On instancie Main
-$app = new Main;
+$app = new Main();
 
 // On démarre l'application
 $app->start();
