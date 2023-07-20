@@ -8,19 +8,19 @@
     <?php endif; ?>
     <button
         type="button"
-        class="btn btn-secondary my-3 text-decoration-line-through"
-        data-bs-toggle="modal"
-        data-bs-target="#inProgressModal"
+        class="btn btn-secondary my-3"
     >
-        Gérer les avis clients
+        <a href="<?= ROOT ?>/employee/reviews" class="text-black text-decoration-none">
+            Gérer les avis clients
+        </a>
     </button>
     <button
         type="button"
-        class="btn btn-secondary my-3 text-decoration-line-through"
-        data-bs-toggle="modal"
-        data-bs-target="#inProgressModal"
+        class="btn btn-secondary my-3"
     >
-        Consulter les emails
+        <a href="https://mail.google.com/mail/u/1/#inbox" target="_blank" class="text-decoration-none">
+            Consulter les emails
+        </a>
     </button>
     <button
         type="button"
@@ -30,11 +30,11 @@
     </button>
     <button
         type="button"
-        class="btn btn-secondary my-3 text-decoration-line-through"
-        data-bs-toggle="modal"
-        data-bs-target="#inProgressModal"
+        class="btn btn-secondary my-3 text-decoration-none"
     >
-        Gérer mon compte
+        <a href="<?= ROOT ?>/employee/userAccount" class="text-decoration-none">
+            Gérer mon compte
+        </a>
     </button>
     <button type="button" class="btn btn-danger my-3">
         <a href="<?= ROOT ?>/employee/logout" class="text-decoration-none">

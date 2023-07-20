@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\CustomerReviewsModel;
+use App\Models\ServicesModel;
 
 class HomeController extends Controller
 {
@@ -12,6 +13,10 @@ class HomeController extends Controller
 
         $reviews = $customerReviews->findByLimit();
 
-        $this->render("home/index", ["reviews" => $reviews]);
+        $allServices = new ServicesModel;
+
+        $services = $allServices->findServices();
+
+        $this->render("home/index", ["reviews" => $reviews, "services" => $services]);
     }
 }

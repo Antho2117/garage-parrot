@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+use App\Autoloader;
 use App\Core\Main;
 
 const ROOT = "/gvp";

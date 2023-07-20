@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Core\Form;
 use App\Models\CarsModel;
 use App\Models\CustomerReviewsModel;
+use App\Models\ServicesModel;
 use App\Models\UsersModel;
 
 class AdminController extends Controller
@@ -14,8 +15,34 @@ class AdminController extends Controller
         session_regenerate_id(true);
         if($_SESSION["user"]["role"] === "admin") {
             $this->render("admin/index", [], "users");
+        } else {
+            header("location: ".ROOT."/connexion");
         }
-        header("location: ".ROOT."/connexion");
+    }
+
+    public function services()
+    {
+        if($_SESSION["user"]["role"] === "admin"){
+
+            if (Form::validateForm($_POST, ["service", "price", "serviceDescribe"])) {
+
+                $newService = new ServicesModel;
+
+                $service = htmlspecialchars($_POST["service"]);
+                $price = htmlspecialchars($_POST["price"]);
+                $serviceDescribe = htmlspecialchars($_POST["serviceDescribe"]);
+
+                $newService->createService($service, $price, $serviceDescribe);
+
+            } else {
+
+                $allServices = new ServicesModel;
+
+                $services = $allServices->findServices();
+
+                $this->render("admin/services", ["services" => $services], "users");
+            }
+        }
     }
 
     public function userAccount()
@@ -39,7 +66,6 @@ class AdminController extends Controller
 
             } else {
                 $staff = new UsersModel;
-
 
                 $user = $staff->findByEmail($_SESSION["user"]["email"]);
 
@@ -157,6 +183,15 @@ class AdminController extends Controller
             header("location: ".ROOT."/connexion");
 
         }
+    }
+
+    public function deleteService(int $id)
+    {
+        $service = new ServicesModel;
+
+        $service->deleteService($id);
+
+        header("location: ".ROOT."/admin/services");
     }
 
     public function deleteEmployee(int $id)

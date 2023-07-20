@@ -17,9 +17,9 @@
             <p class="text-center mt-3 fs-3">Le garage V.Parrot vous propose toutes sortes de prestations de la vente à l'entretien
                 ou la réparation de votre véhicule :
             <ul class="d-md-flex flex-md-column justify-content-md-between">
-                <li>Prestations mécaniques toute marque, y compris véhicules electriques et hybrides.</li>
-                <li>Prestations carrosseries toute marque.</li>
-                <li>Améliorations des performances.</li>
+                <?php foreach ($services as $service): ?>
+                    <li class="fs-4"><?= $service->service_type ?>, <?= $service->service_price ?>€/heure</li>
+                <?php endforeach; ?>
             </ul>
             </p>
         </div>

@@ -6,11 +6,26 @@ use App\Core\Db;
 
 class CarsModel extends Model
 {
+    /**
+     * car table in database
+     */
     public function __construct()
     {
+
         $this->table = 'car';
+
     }
 
+    /**
+     * @param string $brand
+     * @param string $year
+     * @param int $kilometers
+     * @param int $price
+     * @param string $options
+     * @param string $image
+     * @param int $garage
+     * @return void
+     */
     public function addCar(string $brand, string $year, int $kilometers, int $price, string $options, string $image, int $garage)
     {
         $db = Db::getInstance();
@@ -47,6 +62,10 @@ class CarsModel extends Model
         }
     }
 
+    /**
+     * @param $id
+     * @return void
+     */
     public function deleteCar($id)
     {
         $db = Db::getInstance();

@@ -20,6 +20,8 @@ class UsersModel extends Model
         $this->table = "employee";
     }
 
+
+
     public function updateUser(string $gender, string $firstname, string $lastname, string $birthdate, string $email, string $password, string $role, int $garage)
     {
 
@@ -117,132 +119,6 @@ class UsersModel extends Model
 
     public function findByEmail(string $email)
     {
-        return $this->requete("SELECT * FROM $this->table WHERE employee_email = ?", [$email])->fetch();
-    }
-
-    /**
-     * @return string
-     */
-    public function getGender(): string
-    {
-        return $this->gender;
-    }
-
-    /**
-     * @param string $gender
-     * @return UsersModel
-     */
-    public function setGender(string $gender): UsersModel
-    {
-        $this->gender = $gender;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getFirstname(): string
-    {
-        return $this->firstname;
-    }
-
-    /**
-     * @param string $firstname
-     * @return UsersModel
-     */
-    public function setFirstname(string $firstname): UsersModel
-    {
-        $this->firstname = $firstname;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getLastname(): string
-    {
-        return $this->lastname;
-    }
-
-    /**
-     * @param string $lastname
-     * @return UsersModel
-     */
-    public function setLastname(string $lastname): UsersModel
-    {
-        $this->lastname = $lastname;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getBirthdate(): string
-    {
-        return $this->birthdate;
-    }
-
-    /**
-     * @param string $birthdate
-     * @return UsersModel
-     */
-    public function setBirthdate(string $birthdate): UsersModel
-    {
-        $this->birthdate = $birthdate;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getEmail(): string
-    {
-        return $this->email;
-    }
-
-    /**
-     * @param string $email
-     * @return UsersModel
-     */
-    public function setEmail(string $email): UsersModel
-    {
-        $this->email = $email;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getPassword(): string
-    {
-        return $this->password;
-    }
-
-    /**
-     * @param string $password
-     * @return UsersModel
-     */
-    public function setPassword(string $password): UsersModel
-    {
-        $this->password = $password;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getRole(): string
-    {
-        return $this->role;
-    }
-
-    /**
-     * @param string $role
-     * @return UsersModel
-     */
-    public function setRole(string $role): UsersModel
-    {
-        $this->role = $role;
-        return $this;
+        return $this->request("SELECT * FROM $this->table WHERE employee_email = ?", [$email])->fetch();
     }
 }

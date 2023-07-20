@@ -12,7 +12,7 @@ class ConnexionController extends Controller
         if(Form::validateForm($_POST, ["workEmail", "password"])) {
 
             $email = htmlspecialchars($_POST["workEmail"]);
-            $password = $_POST["password"]; //password hash/verify à mettre
+            $password = $_POST["password"];
 
             $usersModel = new UsersModel;
             $user = $usersModel->findByEmail($email);
@@ -22,7 +22,7 @@ class ConnexionController extends Controller
                 header("location: " . ROOT . "/connexion");
             }
 
-            if ($password === $user->employee_password && ($user->employee_role === "admin")){
+            if (password_verify($password, $user->employee_password) && ($user->employee_role === "admin")){
                 //password verify
                 $_SESSION["user"] = ["email" => $user->employee_email, "role" => $user->employee_role];
                 $_SESSION["success"] = "Bienvenue sur votre profil ". ucfirst($user->employee_firstname);

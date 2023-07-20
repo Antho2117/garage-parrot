@@ -18,9 +18,8 @@
         <div class="card shadow-lg mb-3 mx-1 col-md-3" >
             <img src="<?= $car->car_image ?>" class="card-img-top h-100" alt="iacar">
             <div class="card-body d-flex flex-column">
-                <h5 class="card-title">Voiture créée par ia</h5>
+                <h5 class="card-title"><?= $car->car_brand; ?></h5>
                 <ul>
-                    <li>modèle : <?= $car->car_brand; ?></li>
                     <li>année : <?= $car->car_year; ?></li>
                     <li>kms : <?= $car->car_kilometers; ?></li>
                     <li>options : à découvrir dans détails</li>
@@ -51,9 +50,9 @@
                             - options : <?= $car->car_options; ?><br>
                             - prix : <?= $car->car_price; ?>€<br>
                         </p>
-                        <img src="<?= ROOT ?>/assets/images/hoonicorn.png" class="img-fluid rounded mb-2" alt="hoonicorn">
-                        <img src="<?= ROOT ?>/assets/images/hoonicorn.png" class="img-fluid rounded mb-2" alt="hoonicorn">
-                        <img src="<?= ROOT ?>/assets/images/hoonicorn.png" class="img-fluid rounded mb-2" alt="hoonicorn">
+                        <img src="<?= ROOT ?>/assets/images/images-ia/lamborghiani.png" class="img-fluid rounded mb-2" alt="hoonicorn">
+                        <img src="<?= ROOT ?>/assets/images/images-ia/merciades.png" class="img-fluid rounded mb-2" alt="hoonicorn">
+                        <img src="<?= ROOT ?>/assets/images/images-ia/homepage.png" class="img-fluid rounded mb-2" alt="hoonicorn">
 
                         <!-- Form car infos -->
                         <form method="post" action="<?= ROOT ?>/cars/sendForm">

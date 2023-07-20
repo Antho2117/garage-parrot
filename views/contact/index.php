@@ -76,6 +76,10 @@
                 <input type="text" class="form-control" id="phone" name="phone" placeholder="0123456789">
             </div>
             <div class="mb-3">
+                <label for="object" class="form-label">Objet de la demande :</label>
+                <input type="text" class="form-control" id="object" name="object" placeholder="Titre de votre demande">
+            </div>
+            <div class="mb-3">
                 <label for="message" class="form-label">Message :</label>
                 <textarea class="form-control" id="message" name="message" rows="5"></textarea>
             </div>

@@ -1,3 +1,8 @@
+<?php if(!empty($_SESSION["success"])): ?>
+    <div class="alert alert-info mt-3 text-center fs-4 col-12" role="alert">
+        <?php echo $_SESSION["success"]; unset($_SESSION["success"]); ?>
+    </div>
+<?php endif; ?>
 <aside>
     <h2 class="text-center pt-4">Notre atelier</h2>
     <p class="text-center pt-2">Pour un traitement plus rapide, vous pouvez nous appeler au

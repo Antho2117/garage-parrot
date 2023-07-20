@@ -6,11 +6,20 @@ use App\Core\Db;
 
 class CustomerReviewsModel extends Model
 {
+    /**
+     * customer reviews table in database
+     */
     public function __construct()
     {
         $this->table = "customer_review";
     }
 
+    /**
+     * @param string $username
+     * @param string $note
+     * @param string $comment
+     * @return void
+     */
     public function createReviews(string $username, string $note, string $comment)
     {
         $db = Db::getInstance();
@@ -28,16 +37,27 @@ class CustomerReviewsModel extends Model
         if(!$query->execute()){
             header("location:".ROOT."/home");
         } else {
-            header("location:".ROOT."/feedback");
+            if($_SESSION["user"]["role"]){
+                header("location:".ROOT."/".$_SESSION["user"]["role"]."/reviews");
+            } else {
+                header("location:".ROOT."/feedback");
+            }
         }
     }
 
+    /**
+     * @return array|false
+     */
     public function findByLimit()
     {
-        $query = $this->requete('SELECT * FROM '. $this->table. ' ORDER BY customer_review_date DESC LIMIT 6;');
+        $query = $this->request('SELECT * FROM '. $this->table. ' ORDER BY customer_review_date DESC LIMIT 6;');
         return $query->fetchAll();
     }
 
+    /**
+     * @param $id
+     * @return void
+     */
     public function deleteReview($id)
     {
         $db = Db::getInstance();
@@ -45,78 +65,4 @@ class CustomerReviewsModel extends Model
         $sql = "DELETE FROM ".$this->table." WHERE id_customer_review = ".$id.";";
         $db->query($sql);
     }
-
-    /**
-     * @return string
-     */
-    public function getUsername(): string
-    {
-        return $this->username;
-    }
-
-    /**
-     * @param string $username
-     * @return CustomerReviewsModel
-     */
-    public function setUsername(string $username): CustomerReviewsModel
-    {
-        $this->username = $username;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getDate(): string
-    {
-        return $this->date;
-    }
-
-    /**
-     * @param string $date
-     * @return CustomerReviewsModel
-     */
-    public function setDate(string $date): CustomerReviewsModel
-    {
-        $this->date = $date;
-        return $this;
-    }
-
-    /**
-     * @return int
-     */
-    public function getNote(): int
-    {
-        return $this->note;
-    }
-
-    /**
-     * @param int $note
-     * @return CustomerReviewsModel
-     */
-    public function setNote(int $note): CustomerReviewsModel
-    {
-        $this->note = $note;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getComment(): string
-    {
-        return $this->comment;
-    }
-
-    /**
-     * @param string $comment
-     * @return CustomerReviewsModel
-     */
-    public function setComment(string $comment): CustomerReviewsModel
-    {
-        $this->comment = $comment;
-        return $this;
-    }
-
-
 }

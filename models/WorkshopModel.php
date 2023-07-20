@@ -31,6 +31,7 @@ class WorkshopModel extends Model
         if(!$query->execute()){
             header("location:".ROOT."/home");
         } else {
+            $_SESSION["success"] = "Votre demande nous a bien été envoyée, nous y répondrons en moins de 24h.";
             header("location:".ROOT."/workshop");
         }
     }

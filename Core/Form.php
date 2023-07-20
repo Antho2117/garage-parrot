@@ -5,8 +5,8 @@ namespace App\Core;
 class Form
 {
     /**
-     * @param array $form
-     * @param array $fields
+     * @param array $form = GET or POST
+     * @param array $fields = form fields
      * @return bool|void
      */
     public static function validateForm(array $form, array $fields)

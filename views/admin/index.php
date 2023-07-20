@@ -16,11 +16,11 @@
     </button>
     <button
         type="button"
-        class="btn btn-success text-white my-3 text-decoration-line-through"
-        data-bs-toggle="modal"
-        data-bs-target="#inProgressModal"
+        class="btn btn-success text-white my-3"
     >
-        Gérer les services
+        <a href="<?= ROOT ?>/admin/services" class="text-white text-decoration-none">
+            Gérer les services
+        </a>
     </button>
     <button
         type="button"
@@ -48,11 +48,11 @@
     </button>
     <button
         type="button"
-        class="btn btn-secondary my-3 text-decoration-line-through"
-        data-bs-toggle="modal"
-        data-bs-target="#inProgressModal"
+        class="btn btn-secondary my-3"
     >
-        Consulter les emails
+        <a href="https://mail.google.com/mail/u/1/#inbox" target="_blank" class="text-decoration-none">
+            Consulter les emails
+        </a>
     </button>
     <button
         type="button"
@@ -65,7 +65,6 @@
     <button
         type="button"
         class="btn btn-secondary my-3"
-
     >
         <a href="<?= ROOT ?>/admin/userAccount" class="text-decoration-none">
             Gérer mon compte
