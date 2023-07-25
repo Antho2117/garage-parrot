@@ -1,11 +1,13 @@
 # garage-parrot
 
-prendre le dossier intégralement et le coller dans son dossier htdocs de MAMP ou XAMPP (la bdd a été configurée avec user = root et mdp = root)
+prendre le dossier intégralement et le coller dans le dossier htdocs de MAMP (la bdd a été configurée avec user = root et mdp = root)
 
-executer cette commande mysql préalablement à l'import du fichier : 'CREATE DATABASE garage_parrot;'
+renommer le dossier du garage contenu dans htdocs en gvp (obligatoire pour le rendu)
 
-importer le script sql présent dans le fichier garage_parrot.sql
+executer cette commande mysql préalablement à l'import du fichier (dans phpstorm ou phpmyadmin par exemple): 'CREATE DATABASE garage_parrot;'
 
-le site est ensuite disponible à l'adresse {votre config localhost}/{nom de dossier dans votre htdocs}/home, la zone admin est située dans {votre config localhost}/{nom de dossier dans votre htdocs}/connexion
+puis importer le script sql présent dans le fichier garage_parrot.sql au sein de cette base de donnée
+
+le site est ensuite disponible à l'adresse {votre config localhost}/gvp/home, la zone admin est située dans {votre config localhost}/gvp/connexion
 
 Tous les mots de passe sont identiques pour les utilisateurs déja créés : test
