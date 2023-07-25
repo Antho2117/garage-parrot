@@ -11,3 +11,5 @@ puis importer le script sql présent dans le fichier garage_parrot.sql au sein d
 le site est ensuite disponible à l'adresse {votre config localhost}/gvp/home, la zone admin est située dans {votre config localhost}/gvp/connexion
 
 Tous les mots de passe sont identiques pour les utilisateurs déja créés : test
+
+l'adresse mail de l'admin est garagev.parrot2023@gmail.com
